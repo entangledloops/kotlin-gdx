@@ -20,7 +20,7 @@ dependencies {
     api("io.github.libktx:ktx-async:$ktxVersion")
     api("io.github.libktx:ktx-collections:$ktxVersion")
     api("io.github.libktx:ktx-freetype:$ktxVersion")
-    //implementation("io.github.libktx:ktx-freetype-async:$ktxVersion") // enable once coroutines are finished
+    //api("io.github.libktx:ktx-freetype-async:$ktxVersion") // enable once coroutines are finished
     api("io.github.libktx:ktx-graphics:$ktxVersion")
     api("io.github.libktx:ktx-i18n:$ktxVersion")
     api("io.github.libktx:ktx-inject:$ktxVersion")

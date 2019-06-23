@@ -21,6 +21,7 @@ dependencies {
 }
 
 val packageName: String by project
+val versionName: String by project
 
 application {
     mainClassName = "$packageName.DesktopLauncher"
@@ -32,8 +33,8 @@ tasks.register<Jar>("dist") {
     manifest {
         attributes(
                 "Main-Class" to application.mainClassName,
-                "Implementation-Title" to "Gradle",
-                "Implementation-Version" to archiveVersion
+                "Implementation-Title" to packageName,
+                "Implementation-Version" to versionName
         )
     }
 
