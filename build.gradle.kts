@@ -16,6 +16,15 @@ buildscript {
     }
 }
 
+val gradleVersion: String by project
+val gradleVersionForWrapper = gradleVersion
+
+// configure existing wrapper task
+tasks.withType<Wrapper> {
+    gradleVersion = gradleVersionForWrapper
+}
+
+// configure all projects group and version
 val packageName: String by project
 val versionName: String by project
 

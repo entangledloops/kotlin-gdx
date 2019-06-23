@@ -8,8 +8,7 @@ import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;
 
 class IOSLauncher : IOSApplication.Delegate() {
     override fun createApplication(): IOSApplication {
-        val config = IOSApplicationConfiguration()
-        return IOSApplication(Game(), config)
+        return IOSApplication(Game(), IOSApplicationConfiguration())
     }
 
     companion object {

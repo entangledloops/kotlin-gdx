@@ -6,7 +6,6 @@ import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration
 class AndroidLauncher : com.badlogic.gdx.backends.android.AndroidApplication() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val config = AndroidApplicationConfiguration()
-        initialize(Game(), config)
+        initialize(Game(), AndroidApplicationConfiguration())
     }
 }

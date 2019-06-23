@@ -6,7 +6,6 @@ plugins {
 val jdkVersion: String by project
 val gdxVersion: String by project
 val kotlinVersion: String by project
-val packageName: String by project
 
 dependencies {
     implementation(project(":core"))
@@ -20,6 +19,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlinVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
+
+val packageName: String by project
 
 application {
     mainClassName = "$packageName.DesktopLauncher"

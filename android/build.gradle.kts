@@ -6,16 +6,10 @@ plugins {
 }
 
 val natives: Configuration by configurations.creating
-val packageName: String by project
-val versionName: String by project
 val jdkVersion: String by project
 val gdxVersion: String by project
 val ktxVersion: String by project
 val kotlinVersion: String by project
-val androidBuildToolsVersion: String by project
-val androidTargetSdkVersion: String by project
-val androidMinSdkVersion: String by project
-val androidVersionName: String = versionName
 
 dependencies {
     implementation(project(":core"))
@@ -34,6 +28,13 @@ dependencies {
     natives("com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86")
     natives("com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64")
 }
+
+val packageName: String by project
+val versionName: String by project
+val androidBuildToolsVersion: String by project
+val androidTargetSdkVersion: String by project
+val androidMinSdkVersion: String by project
+val androidVersionName: String = versionName
 
 android {
     buildToolsVersion(androidBuildToolsVersion)
