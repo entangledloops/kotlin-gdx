@@ -32,7 +32,7 @@ class Game : KtxGame<Screen>() {
     override fun create() {
         context.register {
             bindSingleton<FileHandleResolver>(InternalFileHandleResolver())
-            bindSingleton(AssetManager().apply {
+            bindSingleton(AssetManager(inject()).apply {
                 setLoader(FreeTypeFontGenerator::class.java, FreeTypeFontGeneratorLoader(inject()))
                 setLoader(BitmapFont::class.java, ".ttf", FreetypeFontLoader(inject()))
                 setLoader(BitmapFont::class.java, ".fnt", BitmapFontLoader(inject()))
