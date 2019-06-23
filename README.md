@@ -2,6 +2,8 @@
 
 This is sample Kotlin cross-platform starter app using [libGDX](https://libgdx.badlogicgames.com).
 
+You **must** edit `local.properties` to point to your own Android SDK.
+
 It is written using the new Kotlin DSL for Gradle. 
 The standard libGDX Groovy scripts have been rewritten for Kotlin.
 
